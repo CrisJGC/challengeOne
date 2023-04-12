@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="utils/normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <title>Encriptador de texto</title>
+  </head>
+  <body>
+    <header>
+      <img src="public/logo.svg" alt="Logo" />
+    </header>
+    <section id="encryptor">
+      <textarea
+        type="text"
+        id="inputArea"
+        placeholder="Ingrese el texto aquí"
+      ></textarea>
+      <p>
+        <img src="public/infoIcon.svg" alt="info" /> Solo letras minúsculas y
+        sin acentos
+      </p>
+      <article>
+        <button id="encryptBtn">Encriptar</button>
+        <button id="decryptBtn">Desencriptar</button>
+      </article>
+    </section>
+    <aside>
+      <div id="response"></div>
+      <button id="copyBtn">Copiar</button>
+    </aside>
+    <footer>Creado por <span>Cris</span> challenge 1</footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

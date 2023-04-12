@@ -1,0 +1,39 @@
+/* TABLET */
+
+@media (width < 727px) {
+  .resultImgDefault {
+    display: none;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 60vh auto;
+    gap: 80px;
+    height: max-content;
+  }
+
+  header {
+    display: block;
+  }
+
+  main {
+    padding-top: 0;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr min-content min-content;
+  }
+}
+
+/* PHONE */
+@media (width < 490px) {
+  body {
+    padding: 24px 16px;
+    grid-template-rows: auto 75vh auto;
+  }
+
+  main section {
+    flex-direction: column;
+  }
+}
