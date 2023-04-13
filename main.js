@@ -38,7 +38,7 @@ const setResponse = (text) => {
 
 const updateInput = () => {
   const lowerInput = input.value.toLowerCase();
-  input.value = lowerInput;
+  input.value = lowerInput.replace(/[0-9áéíóúü]/g, "");
   state.inputSaved = lowerInput;
   if(lowerInput){
     localStorage.setItem("inputSaved", lowerInput);
