@@ -37,11 +37,20 @@ const setResponse = (text) => {
 };
 
 const updateInput = () => {
-  if (input.value) {
-    localStorage.setItem("inputSaved", input.value);
-  } else {
+  const lowerInput = input.value.toLowerCase();
+  input.value = lowerInput;
+  state.inputSaved = lowerInput;
+  if(lowerInput){
+    localStorage.setItem("inputSaved", lowerInput);
+  }
+  else {
     localStorage.removeItem("inputSaved");
   }
+  // if (input.value) {
+  //   localStorage.setItem("inputSaved", input.value);
+  // } else {
+  //   localStorage.removeItem("inputSaved");
+  // }
 };
 
 const copyText = () => {
@@ -52,7 +61,7 @@ const copyText = () => {
 };
 
 const handleSubmit = (submitFn) => () => {
-  setResponse(submitFn(input.value));
+  setResponse(submitFn(input.value.toLowerCase()));
 };
 
 encryptBtn.addEventListener("click", handleSubmit(encrypt));
